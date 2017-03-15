@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	font-family: "Verdana";
+	height: 100vh;
+  	background: radial-gradient(rgb(65, 122, 173), rgb(11, 24, 38));
+}
+
+header>h1 {
+	font-size: 5em;
+	color: white;
+	text-shadow: 4px 4px 8px #dadada;
+}
+
+#bill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#modal {
+	background: radial-gradient(rgb(104, 146, 183), rgb(73, 113, 153));
+	box-shadow: 8px 8px 16px rgb(11, 24, 38);
+	border-radius: 2em;
+	padding: 2em;
+	margin: 2em;
+	width: 40em;
+	height: 50vh;
+	text-align: center;
+}
+
+#modal>h3 {
+	font-size: 3em;
+	color: white;
+	text-shadow: 4px 4px 8px #dadada;
+}
+
+#modal>label {
+	font-size: 1.5em;
+	color: white;
+}
+
+#modal input[type=text] {
+    width: 50%;
+    height: 40px;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 1.2em;
+    margin: 2em;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #e8e8e8;
+}
+
+#box {
+	display: flex;
+	margin: 2em;
+}
+
+#box > * {
+	padding: 6px;
+	margin: 1.2em;
+	flex: 1;
+}
+
+#proceed {
+	background:rgb(11, 24, 38);
+	padding: 2em;
+    border-radius: 1.2em;
+    min-width: 60px;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
