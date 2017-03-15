@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded',function() {
 	var operators = ['Aircel','Airtel','BSNL','Tata Docomo GSM','Idea','Indicom Walky','MTNL Delhi','Reliance GSM/CDMA','Tata Indicom','Telenor','Vodafone','MTS','Videocon Mobile','Virgin GSM','Virgin CDMA','Tata Docomo CDMA','T24','MTNL Mumbai'];
 	var button = document.getElementById('proceed');
 	var mobileNo = document.querySelector('[name=mobileNo]');
+	var id = "";
 
 	function setOptions(array,selector) {
 		array.forEach(function (operator) {
@@ -21,8 +22,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
 	checkboxes.forEach(function(checkbox) {
 		checkbox.addEventListener('click', function(e) {
-			var id = e.target.id;
-			console.log(id);
+			id = e.target.id;
 			if(id == 'postpaid') {
 				circleSelect.style.display = 'none';
 			}
@@ -33,9 +33,40 @@ document.addEventListener('DOMContentLoaded',function() {
 	});
 
 	button.addEventListener('click', function(e) {
-		if(mobileNo.value.trim() == '')
-			alert('Fill all the fields')
-		else alert('Payment Proceeded');
+		if(mobileNo.value.trim() == '' || mobileNo.value.length != 10) {
+			swal(
+			  'Oops...',
+			  "You didn't fill your mobile number",
+			  'error'
+			);
+		}
+		else {
+				swal({
+				  title: 'Enter Amount',
+				  input: 'number',
+				  showCancelButton: true,
+				  confirmButtonText: 'Submit',
+				  showLoaderOnConfirm: true,
+				  preConfirm: function (amount) {
+				    return new Promise(function (resolve, reject) {
+				      setTimeout(function() {
+				        if (amount <= 50) {
+				          reject('The least amount is Rs.50')
+				        } else {
+				          resolve()
+				        }
+				      }, 2000)
+				    })
+				  },
+				  allowOutsideClick: false
+				}).then(function (amount) {
+				  swal({
+				    type: 'success',
+				    title: 'Successful',
+				    html: 'Amount: ' + amount
+				  });
+				});
+		}
 	});
 
 });
