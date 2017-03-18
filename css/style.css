@@ -4,16 +4,20 @@
 	box-sizing: border-box;
 }
 
+html {
+  background: url(pattern.png) no-repeat center center fixed;
+  background-size: cover;
+}
+
 body {
 	text-align: center;
 	font-family: "Verdana";
 	height: 100vh;
-  	background: radial-gradient(rgb(65, 122, 173), rgb(11, 24, 38));
 }
 
 header>h1 {
 	font-size: 5em;
-	color: white;
+	color: radial-gradient(rgb(65, 122, 173), rgb(11, 24, 38));
 	text-shadow: 4px 4px 8px #dadada;
 }
 
@@ -36,13 +40,13 @@ header>h1 {
 
 #modal>h3 {
 	font-size: 3em;
-	color: white;
+	color: radial-gradient(rgb(65, 122, 173), rgb(11, 24, 38));
 	text-shadow: 4px 4px 8px #dadada;
 }
 
 #modal>label {
 	font-size: 1.5em;
-	color: white;
+	color: radial-gradient(rgb(65, 122, 173), rgb(11, 24, 38));
 }
 
 #modal input[type=text] {

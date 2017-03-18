@@ -2,7 +2,7 @@
 
 # Screenshot
 
-![bills-for-older-generation](http://imgur.com/bye2ha0.png)
+![bills-for-older-generation](http://imgur.com/HuG3mes.png)
 
 ## License
 
