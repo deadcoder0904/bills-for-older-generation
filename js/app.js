@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function() {
-	var checkboxes = document.querySelectorAll('[name=checkbox]');
+	var checkboxes = Array.prototype.slice.call(document.querySelectorAll('[name=checkbox]'), 0);
 	var operatorSelect = document.querySelector('[name=operator]');
 	var circleSelect = document.querySelector('[name=circle]');
 	var circles = ['Andhra Pradesh','Assam','Bihar','Chennai','Delhi','Gujarat','Haryana','Himachal Pradesh','Karnataka','Kerala','Kolkata','Madhya Pradesh','Maharashtra','Mumbai','North East','Orissa','Punjab','Rajasthan','Tamil Nadu','Uttar Pradesh (E)','Uttar Pradesh (W)','West Bengal','JK','UTTARANCHAL'];
